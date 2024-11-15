@@ -32,10 +32,11 @@ ssize_t	ft_write_base(unsigned long long num, int base, char *digits)
 		num /= base;
 	}
 	while (--i >= 0)
+	{
 		if (write(FD, &buffer[i], 1) != 1)
 			return (-1);
-	else
 		count++;
+	} 
 	return (count);
 }
 
